@@ -1,0 +1,14 @@
+.container {
+    background: #e98e59;
+    padding: 8px;
+    text-align: center;
+    max-height: 480px;
+    overflow-y: scroll;
+}
+.divScore{ 
+   margin-bottom: 4px;
+}
+.div7Days{
+    background: rgb(136, 190, 190);
+    padding: 9px;
+}

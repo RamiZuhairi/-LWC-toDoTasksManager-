@@ -1,0 +1,22 @@
+<template>
+  <!-- we used containerClass to check witch class we need -->
+  <div class={containerChild}>
+    <span class="slds-text-heading_label">{todoName}</span>
+  
+    <lightning-button-icon
+      icon-name={iconName}
+      class="slds-p-horizontal_medium slds-float_right "
+      onclick={updateHandler}
+      title="Update Todo"
+    >
+    </lightning-button-icon>
+
+    <lightning-button-icon
+      icon-name="action:delete"
+      class="slds-float_right "
+      onclick={deleteHandler}
+      title="delete Todo"
+    >
+    </lightning-button-icon>
+  </div>
+</template>

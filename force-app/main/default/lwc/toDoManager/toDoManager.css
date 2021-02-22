@@ -1,0 +1,19 @@
+/* Css file for To do manager compoment */
+.container {
+  background-color: rgb(246, 252, 232);
+  padding: 16px;
+  overflow-y: scroll;
+  display: block;
+  /* text-align:center !important; */
+}
+.divClass{
+  text-align:left;
+}
+.time {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.greeting {
+  font-size: 2rem;
+  font-weight: 400;
+}

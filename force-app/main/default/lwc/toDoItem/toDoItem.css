@@ -1,0 +1,29 @@
+.todo {
+  border: 1px solid rgb(65, 98, 245);
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 4px;
+  transition: all 0.5s ease;
+  text-align:left;
+  text-transform: uppercase;
+  font-size: smaller;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.completed {
+  background-color: rgb(3, 192, 3);
+}
+.completed:hover {
+  background-color: #49d360;
+  border-radius: 16px;
+  font-weight: bold;
+}
+.upcoming {
+  background-color: #f34949;
+}
+.upcoming:hover {
+  background-color: #f57979;
+  border-radius: 20px;
+  font-weight: bold;
+}

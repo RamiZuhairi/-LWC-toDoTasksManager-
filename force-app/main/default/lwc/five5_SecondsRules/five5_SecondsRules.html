@@ -1,0 +1,31 @@
+<template>
+  <lightning-layout
+    class="slds-align_absolute-center slds-text-align_center container"
+  >
+    <lightning-layout-item size="12">
+      <div class="time">
+        5 Seconds!<lightning-icon
+          icon-name="utility:date_time"
+        ></lightning-icon>
+        <!-- Brand variant: Identifies the primary action in a group of buttons -->
+    
+      </div>
+     
+        <lightning-button
+          variant="brand"
+          label="START"
+          title="Primary action"
+          onclick={handleClick}
+          class="slds-m-left_x-small"
+        ></lightning-button> <lightning-icon
+        icon-name="utility:jump_to_top"
+      ></lightning-icon> 
+      <lightning-dynamic-icon
+      type="eq"
+      option="play"
+      alternative-text="Recording in progress">
+  </lightning-dynamic-icon>
+    </lightning-layout-item>
+  </lightning-layout>
+  
+</template>

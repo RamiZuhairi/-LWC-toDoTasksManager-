@@ -1,0 +1,105 @@
+<template>
+  <lightning-layout
+    class="slds-align_absolute-center slds-text-align_center container"
+    multiple-rows
+  >
+  <lightning-tabset>
+            <lightning-tab label="Manage Tasks">
+                
+            </lightning-tab>
+            <lightning-tab label="To Do List">
+              <!-- <template for:each={completedTodos} for:item="todo">
+                <c-to-Do-Item
+                  key={todo.todoId}
+                  todo-name={todo.todoName}
+                  todo-id={todo.todoId}
+                  done
+                  onupdate={updateTodoHandler}
+                  ondelete={deleteTodoHandler}
+                ></c-to-Do-Item>
+            
+            </template> -->
+              <!-- <template for:each={todo.items} for:item="item">
+                <c-to-do-list-item key={item.todoId} todo-name={item.todoName} todo-id={item.todoId}
+                    done={item.done}>
+                </c-to-do-list-item>
+            </template>   -->
+            </lightning-tab>
+        </lightning-tabset>
+    <lightning-layout-item size="12">
+      <div class="time">{time}</div>
+    </lightning-layout-item>
+    <lightning-layout-item size="12">
+      <div class="greeting">
+        {greeting}<lightning-icon
+          icon-name="utility:smiley_and_people"
+        ></lightning-icon
+        ><lightning-icon icon-name="utility:like"></lightning-icon>
+      </div>
+    </lightning-layout-item>
+    <lightning-layout-item size="12">
+      <div class="slds-text-heading_large slds-m-vertical_large">
+        What is your main focus today<lightning-icon
+          icon-name="utility:question"
+        ></lightning-icon>
+      </div>
+    </lightning-layout-item>
+
+    <lightning-layout-item
+      size="12"
+      large-device-size="6"
+      medium-device-size="10"
+      small-device-size="12"
+      class="slds-m-top_larg"
+    >
+      <lightning-layout>
+        <lightning-layout-item size="11">
+          <lightning-input
+            type="text"
+            label="Add task to do?"
+            variant="label-hidden"
+            placeholder="Add your task to accomplish:"
+          ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="1">
+          <lightning-button-icon
+            icon-name="action:add_relationship"
+            title="Add to do"
+            onclick={addTodoHandler}
+          ></lightning-button-icon>
+        </lightning-layout-item>
+      </lightning-layout>
+    </lightning-layout-item>
+    <lightning-layout-item size="12">
+      <div class="divClass"><b>UPCOMING TASKS</b></div>
+      <!-- <template if:true={responseReceviedUpcoming}> -->
+        <template for:each={upcomingTodos} for:item="todo">
+          <c-to-Do-Item
+            key={todo.todoId}
+            todo-name={todo.todoName}
+            todo-id={todo.todoId}
+            onupdate={updateTodoHandler}
+            ondelete={deleteTodoHandler}
+          ></c-to-Do-Item>
+        </template>
+      <!-- </template> -->
+
+      <div class="divClass"><b>COMPLETED TASKS</b></div>
+      <!-- <template if:true={responseReceviedCompleted}> -->
+        <template for:each={completedTodos} for:item="todo">
+          <c-to-Do-Item
+            key={todo.todoId}
+            todo-name={todo.todoName}
+            todo-id={todo.todoId}
+            done
+            onupdate={updateTodoHandler}
+            ondelete={deleteTodoHandler}
+          ></c-to-Do-Item>
+        <!-- </template> -->
+      </template>
+      
+    </lightning-layout-item>
+
+    <lightning-icon icon-name="action:smiley_and_people"></lightning-icon>
+  </lightning-layout>
+</template>
